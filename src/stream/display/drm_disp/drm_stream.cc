@@ -236,6 +236,13 @@ bool DRMStream::GetAgreeableIDSet() {
     plane_id = planeid;
     break;
   }
+  ///*
+  if(plane_id == 84) {
+		connector_id = 185;
+		encoder_id = 184;
+		crtc_id = 83;
+  }
+  //*/
   // get mode info
   if (i < ids.count_connectors) {
     //    auto dme = get_encoder_by_id(res, encoder_id);
@@ -266,6 +273,7 @@ bool DRMStream::GetAgreeableIDSet() {
 
     SetModeInfo(cur_mode);
   }
+
   RKMEDIA_LOGI(
       "conn id : %d, enc id: %d, crtc id: %d, plane id: %d, w/h: %d,%d, fps: "
       "%d\n",
