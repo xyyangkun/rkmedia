@@ -162,7 +162,7 @@ int V4L2Stream::IoCtrl(unsigned long int request, ...) {
 
     if (arg->data && (arg->size > 0)) {
       RKMEDIA_LOGI("V4L2: Insert user picture: ptr:%p, size:%d\n", arg->data,
-                   arg->size);
+                   (int)arg->size);
       auto mb = MediaBuffer::Alloc((size_t)arg->size,
                                    MediaBuffer::MemType::MEM_HARD_WARE);
       if (!mb) {
