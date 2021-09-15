@@ -306,12 +306,12 @@ install(TARGETS rkmedia_rga_osd_test RUNTIME DESTINATION "bin")
 #--------------------------
 # rkmedia_rga_crop_venc_test
 #--------------------------
-link_directories(${PROJECT_SOURCE_DIR}/librtsp/)
-add_executable(rkmedia_rga_crop_venc_test rkmedia_rga_crop_venc_test.c ${COMMON_SRC})
-add_dependencies(rkmedia_rga_crop_venc_test easymedia)
-target_link_libraries(rkmedia_rga_crop_venc_test rtsp easymedia rga)
-target_include_directories(rkmedia_rga_crop_venc_test PRIVATE ${CMAKE_SOURCE_DIR}/include)
-install(TARGETS rkmedia_rga_crop_venc_test RUNTIME DESTINATION "bin")
+#link_directories(${PROJECT_SOURCE_DIR}/librtsp/)
+#add_executable(rkmedia_rga_crop_venc_test rkmedia_rga_crop_venc_test.c ${COMMON_SRC})
+#add_dependencies(rkmedia_rga_crop_venc_test easymedia)
+#target_link_libraries(rkmedia_rga_crop_venc_test rtsp easymedia rga)
+#target_include_directories(rkmedia_rga_crop_venc_test PRIVATE ${CMAKE_SOURCE_DIR}/include)
+#install(TARGETS rkmedia_rga_crop_venc_test RUNTIME DESTINATION "bin")
 endif() #if(V4L2_CAPTURE)
 endif() #if(RKRGA)
 
@@ -324,13 +324,13 @@ if(V4L2_CAPTURE)
 #--------------------------
 #  rkmedia_vi_rockx_venc_rtsp_test
 #--------------------------
-link_directories(${PROJECT_SOURCE_DIR}/librtsp/)
-add_executable(rkmedia_vi_rockx_venc_rtsp_test rkmedia_vi_rockx_venc_rtsp_test.c ${COMMON_SRC})
-add_dependencies(rkmedia_vi_rockx_venc_rtsp_test easymedia)
-target_link_libraries(rkmedia_vi_rockx_venc_rtsp_test rtsp rockx easymedia)
-target_include_directories(rkmedia_vi_rockx_venc_rtsp_test PRIVATE ${CMAKE_SOURCE_DIR}/include ${CMAKE_SYSROOT}/usr/include/rockx)
-install(TARGETS rkmedia_vi_rockx_venc_rtsp_test RUNTIME DESTINATION "bin")
-install(FILES rtsp-nn.cfg DESTINATION share)
+#link_directories(${PROJECT_SOURCE_DIR}/librtsp/)
+#add_executable(rkmedia_vi_rockx_venc_rtsp_test rkmedia_vi_rockx_venc_rtsp_test.c ${COMMON_SRC})
+#add_dependencies(rkmedia_vi_rockx_venc_rtsp_test easymedia)
+#target_link_libraries(rkmedia_vi_rockx_venc_rtsp_test rtsp rockx easymedia)
+#target_include_directories(rkmedia_vi_rockx_venc_rtsp_test PRIVATE ${CMAKE_SOURCE_DIR}/include ${CMAKE_SYSROOT}/usr/include/rockx)
+#install(TARGETS rkmedia_vi_rockx_venc_rtsp_test RUNTIME DESTINATION "bin")
+#install(FILES rtsp-nn.cfg DESTINATION share)
 endif() #if(V4L2_CAPTURE)
 endif() #if(ROCKX)
 
@@ -343,14 +343,14 @@ if(V4L2_CAPTURE)
 #--------------------------
 #  rkmedia_vi_rknn_venc_rtsp_test
 #--------------------------
-link_directories(${PROJECT_SOURCE_DIR}/librtsp/)
-add_executable(rkmedia_vi_rknn_venc_rtsp_test rkmedia_vi_rknn_venc_rtsp_test.c ${COMMON_SRC})
-add_dependencies(rkmedia_vi_rknn_venc_rtsp_test easymedia)
-target_link_libraries(rkmedia_vi_rknn_venc_rtsp_test rtsp rknn_api m easymedia rga)
-target_include_directories(rkmedia_vi_rknn_venc_rtsp_test PRIVATE ${CMAKE_SOURCE_DIR}/include ${CMAKE_SYSROOT}/usr/include/rknn)
-install(TARGETS rkmedia_vi_rknn_venc_rtsp_test RUNTIME DESTINATION "bin")
-install(FILES rtsp-nn.cfg DESTINATION share)
-install(DIRECTORY rknn_model DESTINATION share)
+#link_directories(${PROJECT_SOURCE_DIR}/librtsp/)
+#add_executable(rkmedia_vi_rknn_venc_rtsp_test rkmedia_vi_rknn_venc_rtsp_test.c ${COMMON_SRC})
+#add_dependencies(rkmedia_vi_rknn_venc_rtsp_test easymedia)
+#target_link_libraries(rkmedia_vi_rknn_venc_rtsp_test rtsp rknn_api m easymedia rga)
+#target_include_directories(rkmedia_vi_rknn_venc_rtsp_test PRIVATE ${CMAKE_SOURCE_DIR}/include ${CMAKE_SYSROOT}/usr/include/rknn)
+#install(TARGETS rkmedia_vi_rknn_venc_rtsp_test RUNTIME DESTINATION "bin")
+#install(FILES rtsp-nn.cfg DESTINATION share)
+#install(DIRECTORY rknn_model DESTINATION share)
 endif() #if(V4L2_CAPTURE)
 endif() #if(RKNN)
 
